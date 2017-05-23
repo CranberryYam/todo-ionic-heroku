@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+       My List
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+      
+
+         <div class="card" *ngFor="let checklist of checklists" (click)="viewChecklist(checklist)"> 
+            <img [src]="checklist.backImage" />
+            <div class="card-title">{{checklist.title}}</div> 
+            <div class="card-subtitle">{{checklist.items.length}} items</div> 
+         </div>
+
+
+        <ion-fab bottom center>
+        <button ion-fab mini (click)="addChecklist()"> <ion-icon name="add"></ion-icon> </button>
+        </ion-fab>
+</ion-content>

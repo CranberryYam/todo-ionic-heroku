@@ -1,0 +1,48 @@
+page-checklist {
+
+
+  // .card {
+  //   position: relative;
+  //   text-align: center;
+  //   // overflow: visible;
+  // }
+.toolbar {
+    .toolbar-background {
+      background: transparent;
+    }
+  }
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: yellow;
+    color: white;
+}
+
+.container {
+    background-color: yellow;
+    color: white;
+    padding: 2px 16px;
+}
+
+//  ion-item-sliding {
+//        margin: 5px;
+//    }
+  
+//    [ion-item] {
+//     //  font-size: 2.2em;
+//     //  font-weight: bold;
+//     //  color: #282828;
+//     //  padding-top: 10px;
+//     //  padding-bottom: 10px;
+//      background-color: white;
+//     //  box-shadow: 10px 10px 20px #888888;
+//    }
+//    [ion-item] span {
+//     //  display: block;
+//      color: white;
+//     //  font-weight: 400;
+//     //  margin-top: 10px;
+//    }
+
+}

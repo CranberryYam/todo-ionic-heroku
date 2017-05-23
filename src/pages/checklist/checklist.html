@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title align-title="center">
+       {{checklist.title}}
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+      <div class="card"> 
+            <!--<div class="imageView">-->
+            <img [src]="checklist.backImage2" alt="Avatar" style="width:100%">
+
+      <div class="container">
+        <ion-list no-lines>
+              <ion-item-sliding  *ngFor="let item of checklist.items">
+                
+                    <ion-item>
+                      <ion-label>{{item.title}}</ion-label>
+                      <ion-checkbox [checked]="item.checked" (click)="toggleItem(item)"></ion-checkbox>   
+                    </ion-item>
+
+                    <ion-item-options side="right">
+                      <button ion-button icon-only color="light" (click)="renameItems(item)">
+                            <ion-icon name="clipboard"></ion-icon>
+                      </button>
+                      <button ion-button icon-only color="danger" (click)="removeItems(item)">
+                            <ion-icon name="trash"></ion-icon>
+                      </button>
+                    </ion-item-options>
+
+                </ion-item-sliding>
+          </ion-list>
+      </div>
+          
+      </div>
+
+        <ion-fab bottom right>
+        <button ion-fab mini (click)="renameChecklist()" color="blue"> <ion-icon name="clipboard"></ion-icon> </button>
+        </ion-fab>
+        <ion-fab bottom center>
+        <button ion-fab mini (click)="addItems()"> <ion-icon name="add"></ion-icon> </button>
+        </ion-fab>
+        <ion-fab bottom left>
+        <button ion-fab mini (click)="removeChecklist()" color="danger"> <ion-icon name="trash"></ion-icon> </button>
+        </ion-fab>
+
+
+</ion-content>
